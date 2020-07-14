@@ -1,8 +1,17 @@
+const semver = require('semver');
+
 class ServiceRegistry {
   constructor(log) {
     this.log = log;
     this.services = {};
     this.timeout = 30;
+  }
+
+  get(name, version) {
+    const candidates = Object.values(this.services)
+      .filter(service => service.name === name && semver.satisfies(service.version, version));
+
+    return candidates[Math.floor(Math.random() * candidates.length)];
   }
 
   register(name, version, ip, port) {
@@ -25,9 +34,6 @@ class ServiceRegistry {
 
   unregister(name, version, ip, port) {
     const key = name + version + ip + port;
-    if (!this.services[key]) {
-      return '404';
-    }
     delete this.services[key];
     return key;
   }
