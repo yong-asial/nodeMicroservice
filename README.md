@@ -7,17 +7,27 @@
 
 ## Queue System
 
-- Run `/usr/local/sbin/rabbitmq-server`
-
-## Main App
-
-- Conference App
+- Start Queue by running `/usr/local/sbin/rabbitmq-server`
 
 ## Service registry
 
-- Service Registry
+- Start Service Registry
+- `cd service-registry; npm i; npm start;`
 
 ## Services
 
-- Feedback Service
-- Speaker Service
+### Feedback Service
+
+- Start Feedback Service
+- `cd feedback-service; npm i; npm start;`
+
+### Speaker Service
+
+- Start Speaker Service
+- `cd speakers-service; npm i; npm start;`
+
+## Main App
+
+- Start the web server
+- `cd conference-app; npm i; npm start;`
+- Open the browser and go to `http:localhost:8090`
