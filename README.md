@@ -32,4 +32,4 @@
 
 - Start the web server
 - `cd conference-app; npm i; npm start;`
-- Open the browser and go to `http:localhost:8090`
+- Open the browser and go to `http://localhost:3080`
