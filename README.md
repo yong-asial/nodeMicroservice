@@ -1,5 +1,7 @@
 # Microservices with NodeJs
 
+![System Outline](./images/Infrastructures.png)
+
 ## Prerequisite
 
 - [RabiitMQ](https://www.rabbitmq.com/download.html)
